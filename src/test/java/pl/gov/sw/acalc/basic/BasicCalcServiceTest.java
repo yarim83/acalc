@@ -22,4 +22,18 @@ public class BasicCalcServiceTest {
         // then
         assertThat(sum).isEqualTo(7);
     }
+
+    @Test
+    @DisplayName("5 minus 2 should equal 3")
+    void shouldSubstractTwoIntegers(){
+        //given
+        Integer minuend = 5;
+        Integer subtrahend = 2;
+
+        //when
+        var sub = service.subtract(minuend, subtrahend);
+
+        //then
+        assertThat(sub).isEqualTo(3);
+    }
 }

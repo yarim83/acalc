@@ -23,4 +23,12 @@ public class BasicCalcController {
         var sum = basicCalcService.add(operation.getAddend1(), operation.getAddend2());
         return new Result(sum);
     }
+
+    @PostMapping(value = "/substract")
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    public Result sub(@RequestBody Operation operation){
+        var sub = basicCalcService.subtract(operation.getAddend1(), operation.getAddend2());
+        return new Result(sub);
+    }
 }

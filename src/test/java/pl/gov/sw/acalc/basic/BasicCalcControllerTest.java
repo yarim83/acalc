@@ -33,6 +33,13 @@ public class BasicCalcControllerTest {
     @Test
     @DisplayName("POST /api/v1/subtract")
     void shouldSubtract() {
-
+        client
+                .post()
+                .uri("/api/v1/substract")
+                .bodyValue(new Operation(5, 2))
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody()
+                .json("{\"value\": 3}");
     }
 }

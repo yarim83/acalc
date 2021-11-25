@@ -12,6 +12,6 @@ public class BasicCalcServiceImpl implements BasicCalcService {
 
     @Override
     public Integer subtract(Integer minuend, Integer subtrahend) {
-        return null;
+        return minuend - subtrahend;
     }
 }
